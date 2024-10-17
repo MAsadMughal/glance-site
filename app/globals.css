@@ -1,27 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    --orange-100: 252 245 242;
+    --orange-200: 249 231 225;
+    --orange-300: 243 205 190;
+    --orange-400: 237, 174, 148;
+    --orange-500: 228, 114, 8;
+    --orange-600: 215, 107, 8;
+    --orange-700: 186, 93, 7;
+    --orange-800: 152, 76, 5;
+    --orange-900: 107, 54, 4;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+    --blue-100: 242, 245, 252;
+    --blue-200: 225, 232, 249;
+    --blue-300: 190, 207, 243;
+    --blue-400: 148, 178, 237;
+    --blue-500: 8, 122, 228;
+    --blue-600: 8, 115, 215;
+    --blue-700: 7, 100, 186;
+    --blue-800: 5, 81, 152;
+    --blue-900: 4, 57, 107;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    --pink-100: 255, 249, 249;
+    --pink-200: 255, 241, 241;
+    --pink-300: 255, 226, 226;
+    --pink-400: 254, 209, 209;
+    --pink-500: 254, 182, 182;
+    --pink-600: 239, 172, 172;
+    --pink-700: 207, 149, 149;
+    --pink-800: 169, 121, 121;
+    --pink-900: 120, 86, 86;
+
   }
 }
