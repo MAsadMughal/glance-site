@@ -36,7 +36,7 @@ export default function Home() {
         <div className="w-full md:w-2/5 md:my-5 xl:my-10 flex items-center justify-end"><Image src="/home-doctor-img.png" alt="" height={1000} width={1000} /> </div>
       </div>
 
-      <div className="bg-landingCases bg-no-repeat lg:bg-repeat backdrop-brightness-200 bg-cover lg:bg-contain py-20 mt-10">
+      <div className="bg-landingCases bg-no-repeat lg:bg-repeat bg-cover lg:bg-contain py-20 mt-10">
         <div className="flex flex-col items-center">
           <p className="text-blue font-medium  md:text-xs mb-4">CASE STUDY</p>
           <p className="text-black font-medium text-3xl mb-10 md:text-4xl text-center ">Customers’ Use Cases</p>
