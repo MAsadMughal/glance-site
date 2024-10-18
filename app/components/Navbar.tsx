@@ -6,7 +6,7 @@ import { useState } from 'react'
 import NavbarSolutionsSubMenu from './NavbarSolutionsSubMenu'
 const Navbar = () => {
     return (
-        <div className='sticky top-0 z-50 bg-white px-5 md:px-5 lg:px-10 xl:px-28 py-4 border-b md:border-none'>
+        <div className='sticky select-none top-0 z-50 bg-white px-5 md:px-5 lg:px-10 xl:px-28 py-4 border-b md:border-none'>
             <div className='flex flex-row items-center justify-between'>
                 <div className='min-w-16 md:min-w-24 max-w-24 pr-3 md:pr-0 border-r py-1 md:py-0 md:border-r-0'>
                     <Image alt='' width={200} height={200} src={'/logo.png'} />
