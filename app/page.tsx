@@ -1,21 +1,20 @@
 import Image from "next/image";
-import { BiSolidPieChartAlt2 } from "react-icons/bi";
-import { HiDocumentMagnifyingGlass } from "react-icons/hi2";
-import { IoDocumentText, IoShieldCheckmarkSharp } from "react-icons/io5";
 import CaseStudyCard from "./components/CaseStudyCard";
-import SolutionsCard from "./components/SolutionsCard";
+import { Poppins } from "next/font/google";
+
+
 
 export default function Home() {
-  return (
-    <div className="mt-10 font-poppins">
 
+  return (
+    <div className={`mt-12 md:mt-28 font-poppins`} >
       <div className="flex flex-row items-center px-5 md:ps-5 md:pe-0 lg:ps-10 xl:ps-28 ">
         <span className="text-zinc-800 md:text-neutral-400 font-medium lg:text-sm">Home</span>
-        <div className="w-2 h-2 bg-slate-200 rounded-full mx-2"></div>
+        <div className="w-1 h-1 bg-slate-200 rounded-full mx-4"></div>
         <span className="text-blue text-sm lg:text-sm font-medium">HCP</span>
       </div>
       <div className="flex flex-row px-5 md:ps-5 md:pe-0 lg:ps-10 xl:ps-28 py-4 flex-wrap md:gap-x-14 gap-y-6 justify-between md:flex-nowrap">
-        <div className="flex flex-col justify-evenly w-full md:w-3/5 gap-y-6">
+        <div className="flex flex-col justify-start w-full md:w-3/5  gap-y-6">
           <div className="hidden md:flex flex-row items-center flex-wrap gap-y-2 gap-x-3 text-nowrap">
             <span className="bg-blue rounded-xl px-3 text-white text-xs xl:text-sm">HEALTHCARE PROVIDERS</span>
             <div className="w-3 h-3 bg-slate-200 rounded-full mx-2"></div>
@@ -33,13 +32,13 @@ export default function Home() {
         </div>
 
 
-        <div className="w-full md:w-2/5 md:my-5 xl:my-10 flex items-center justify-end"><Image src="/home-doctor-img.png" alt="" height={1000} width={1000} /> </div>
+        <div className="w-full md:w-2/5 md:my-5 xl:my-0 my-2 flex md:items-center lg:items-start justify-end"><Image src="/home-doctor-img.png" alt="" height={1000} width={1000} /> </div>
       </div>
 
-      <div className="bg-landingCases bg-no-repeat lg:bg-repeat bg-cover lg:bg-contain py-20 mt-10">
+      <div className="bg-landingCases bg-no-repeat lg:bg-repeat bg-cover lg:bg-contain py-16 md:py-20 mt-20 xl:mt-40 md:px-20">
         <div className="flex flex-col items-center">
-          <p className="text-blue font-medium  md:text-xs mb-4">CASE STUDY</p>
-          <p className="text-black font-medium text-3xl mb-10 md:text-4xl text-center ">Customers’ Use Cases</p>
+          <p className="text-blue font-medium text-xs mb-4">CASE STUDY</p>
+          <p className="text-black font-medium text-3xl mb-20 md:text-4xl text-center ">Customers’ Use Cases</p>
           <div className="flex flex-row flex-wrap md:gap-x-6 justify-center gap-y-10">
             <CaseStudyCard image="/casestudy1.png" content="Medical group to increase claim revenue and improve documentation quality using GlanceClaim" />
             <CaseStudyCard image="/casestudy2.png" content="20+ doctor medical center prevents revenue leakage and increases coding accuracy using GlanceClaim™" />

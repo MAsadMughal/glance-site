@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { MdKeyboardArrowDown } from 'react-icons/md'
+import MobileMenu from './MobileMenu'
+import { useState } from 'react'
+import NavbarSolutionsSubMenu from './NavbarSolutionsSubMenu'
 const Navbar = () => {
     return (
         <div className='sticky top-0 z-50 bg-white px-5 md:px-5 lg:px-10 xl:px-28 py-4 border-b md:border-none'>
@@ -12,7 +15,7 @@ const Navbar = () => {
                     <div className='flex flex-row text-nowrap items-center gap-x-1'>
                         <div className='cursor-pointer px-2 lg:px-4 py-1 lg:py-2 text-black font-medium text-xs md:text-sm lg:text-lg'>About Us</div>
                         <div className='cursor-pointer px-2 lg:px-4 py-1 lg:py-2 text-black font-medium text-xs md:text-sm lg:text-lg'>Why Glance</div>
-                        <div className='cursor-pointer px-2 lg:px-4 py-1 lg:py-2 text-black font-medium text-xs md:text-sm lg:text-lg flex items-center gap-x-1'>Solutions <MdKeyboardArrowDown /></div>
+                        <NavbarSolutionsSubMenu />
                         <div className='cursor-pointer px-2 lg:px-4 py-1 lg:py-2 text-black font-medium text-xs md:text-sm lg:text-lg'>Knowledge Centre</div>
                     </div>
                     <div className='text-black font-medium flex text-lg gap-x-2'>
@@ -23,7 +26,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='md:hidden'>
-                    <AiOutlineMenu  className='text-3xl text-blue cursor-pointer' />
+                    <MobileMenu />
                 </div>
             </div>
         </div>
