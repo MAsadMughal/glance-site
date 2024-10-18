@@ -19,8 +19,7 @@ const MobileMenu: React.FC = () => {
                 <AiOutlineMenu />
             </div>
             {isOpen && (
-                <div className="absolute h-screen flex flex-col justify-between pt-4  bg-white shadow-md rounded-b-2xl font-poppins px-5 top-0 left-0 w-full" ref={menuRef}>
-
+                <div className="absolute h-lvh flex flex-col justify-between pt-4 bg-white shadow-md rounded-b-2xl font-poppins px-5 top-0 left-0 w-full" ref={menuRef}>
                     <div className='flex flex-col'>
                         <div className='flex flex-row items-center justify-between '>
                             <div className='min-w-16 md:min-w-24 max-w-24 pr-3 md:pr-0 border-r py-1 md:py-0 md:border-r-0'>
@@ -30,7 +29,7 @@ const MobileMenu: React.FC = () => {
                                 <IoClose />
                             </div>
                         </div>
-                        <div className='flex flex-col space-y-2 mt-5'>
+                        <div className='flex flex-col space-y-2 mt-5 h-full'>
                             <div>About Us</div>
                             <div>Why Glance</div>
                             <div className='flex flex-row items-center gap-x-1'>Solutions <MdKeyboardArrowDown className={`${subMenuOpen && 'rotate-180'}`} onClick={() => setSetMenuOpen((prev) => !prev)} /></div>
@@ -39,7 +38,7 @@ const MobileMenu: React.FC = () => {
                         </div>
                     </div>
                     <div>
-                        <div className='border-b-slate-400 border-b min-w-full  opacity-35'></div>
+                        <div className='border-b-slate-400 border-b min-w-full opacity-35'></div>
                         <div className="flex flex-row justify-end gap-x-3 my-2">
                             <button className='text-blue border border-blue px-5 py-2 text-xs rounded-full'>Log In</button>
                             <div className='rounded-full shadow-md shadow-blue-400  p-0.5 bg-gradient-to-r from-pink from-10% via-blue via-50% to-pink to-100%'>
