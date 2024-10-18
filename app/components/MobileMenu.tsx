@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { IoClose } from 'react-icons/io5';
 import { MdKeyboardArrowDown } from 'react-icons/md';
@@ -12,24 +12,35 @@ const MobileMenu: React.FC = () => {
     const toggleMenu = () => setIsOpen((prev) => !prev);
     const [subMenuOpen, setSetMenuOpen] = useState(false);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
 
+        // Cleanup on unmount
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isOpen]);
     return (
         <div className='z-50'>
             <div className="text-3xl text-blue cursor-pointer" onClick={toggleMenu}>
-                <AiOutlineMenu />
+                {isOpen ? <IoClose /> : <AiOutlineMenu />}
             </div>
             {isOpen && (
-                <div className="absolute h-lvh flex flex-col justify-between pt-4 bg-white shadow-md rounded-b-2xl font-poppins px-5 top-0 left-0 w-full" ref={menuRef}>
+                <div className="absolute flex flex-col justify-between  bg-white shadow-md rounded-b-2xl font-poppins px-5 top-16 left-0 w-full" ref={menuRef}>
                     <div className='flex flex-col'>
-                        <div className='flex flex-row items-center justify-between '>
+                        {/* <div className='flex flex-row items-center justify-between '>
                             <div className='min-w-16 md:min-w-24 max-w-24 pr-3 md:pr-0 border-r py-1 md:py-0 md:border-r-0'>
                                 <Image alt='' width={200} height={200} src={'/logo.png'} />
                             </div>
                             <div className='text-3xl text-blue cursor-pointer' onClick={toggleMenu}>
                                 <IoClose />
                             </div>
-                        </div>
-                        <div className='flex flex-col space-y-2 mt-5 h-full'>
+                        </div> */}
+                        <div className='flex flex-col space-y-2 mt-5 mb-10 h-full'>
                             <div>About Us</div>
                             <div>Why Glance</div>
                             <div className='flex flex-row items-center gap-x-1'>Solutions <MdKeyboardArrowDown className={`${subMenuOpen && 'rotate-180'}`} onClick={() => setSetMenuOpen((prev) => !prev)} /></div>

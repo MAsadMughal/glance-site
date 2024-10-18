@@ -10,7 +10,7 @@ import { FaMedium } from 'react-icons/fa'
 const Footer = () => {
     return (
         <div className='font-poppins'>
-            <div className="flex flex-col mt-20 md:mt-24 items-center px-5 md:px-5 lg:px-10 xl:px-28 py-4 ">
+            <div className="flex flex-col mt-20 md:mt-24 items-center px-5 md:px-5 lg:px-10 xl:px-28 ">
                 <p className="text-blue font-medium text-xs mb-4">SOLUTIONS</p>
                 <p className="text-black font-medium text-3xl mb-10 md:text-4xl text-center">Solutions for Healthcare Providers</p>
                 <div className="grid md:grid-cols-3 gap-4">
