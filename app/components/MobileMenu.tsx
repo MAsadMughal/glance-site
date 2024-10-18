@@ -19,7 +19,7 @@ const MobileMenu: React.FC = () => {
                 <AiOutlineMenu />
             </div>
             {isOpen && (
-                <div className="absolute h-screen flex flex-col overflow-auto justify-between pt-4  bg-white shadow-md rounded-b-2xl font-poppins px-5 top-0 left-0 w-screen" ref={menuRef}>
+                <div className="absolute h-screen flex flex-col justify-between pt-4  bg-white shadow-md rounded-b-2xl font-poppins px-5 top-0 left-0 w-full" ref={menuRef}>
 
                     <div className='flex flex-col'>
                         <div className='flex flex-row items-center justify-between '>
@@ -32,7 +32,6 @@ const MobileMenu: React.FC = () => {
                         </div>
                         <div className='flex flex-col space-y-2 mt-5'>
                             <div>About Us</div>
-                            <div>Why Glance</div>
                             <div>Why Glance</div>
                             <div className='flex flex-row items-center gap-x-1'>Solutions <MdKeyboardArrowDown className={`${subMenuOpen && 'rotate-180'}`} onClick={() => setSetMenuOpen((prev) => !prev)} /></div>
                             {subMenuOpen && <div className='ps-3'>Solutions SubMenu Content Here</div>}
